@@ -11,7 +11,7 @@ def main():
     start_time = time.time()          
     elements = [100000 + x for x in range(10)]    
      
-    with ThreadPoolExecutor(max_workers=5) as executor:
+    with ThreadPoolExecutor(max_workers=100) as executor:
         threads = []
         for ele in elements:   
             t = executor.submit(cpu_bound_factorial, ele)
